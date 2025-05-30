@@ -1,0 +1,13 @@
+#!/usr/bin/awk -f
+
+/^  --.*-/ {
+    gsub("-", "\\-", $1)
+    gsub("-", "\\-", $2)
+    print ".TP"
+    print ".BR " $2 " \", \" " $1
+    remainder = ""
+    for (i = 3; i < NF; i++)
+	remainder = remainder $i " "
+    print remainder $NF "."
+}
+
