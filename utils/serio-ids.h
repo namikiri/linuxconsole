@@ -141,4 +141,11 @@
 # define SERIO_FSIA6B		0x42
 #endif
 
+// actually it would be nice to add this to linux/serio.h
+// but Linus likely won't accept this driver into the main kernel
+// anybody to try tho?
+#ifndef SERIO_FLYTOUCH
+#define SERIO_FLYTOUCH 0xe4
+#endif
+
 #endif

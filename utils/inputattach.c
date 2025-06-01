@@ -977,6 +977,10 @@ static struct input_types input_types[] = {
 { "--zhen-hua",		"-zhen",	"Zhen Hua 5-byte protocol",
 	B19200, CS8,
 	SERIO_ZHENHUA,		0x00,	0x00,	0,	zhenhua_init },
+{ "--flytouch",	"-fly",		"FlyPOS Pro Touchscreen",
+	B9600, CS8,
+	SERIO_FLYTOUCH,	0x00,   0x00,   0,	NULL },
+
 { NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, NULL }
 };
 
